@@ -1,14 +1,10 @@
 from datasets.noticias import mensagens_bom_dia
-from datasets.noticias import mensagens_potencialmente_ofensivas
 from datasets.noticias import sugestoes_reportagens
-from datasets.noticias import noticias_ultima_hora
-from datasets.noticias import noticias_nao_tao_recentes
-from datasets.noticias import noticias_teste
-from datasets.noticias import falta_sinal_globo
 from datasets.noticias_novas import noticias_recentes
 from datasets.noticias_novas import sugestoes_reportagens
 from datasets.noticias_novas import faltas_de_sinais
 from datasets.noticias_novas import mensagens_bom_dia
+from datasets.noticias_novas import localizacoes
 import string
 from collections import Counter
 
@@ -77,7 +73,8 @@ class NLP:
         credibilidade_noticia_quente = (self.checa_msg_em_dicionario(mensagem, dict_path='src/dicts/dicionario_quente.txt'), 'noticia quente')
         credibilidade_noticia_fria = (self.checa_msg_em_dicionario(mensagem, dict_path='src/dicts/dicionario_frio.txt'), 'noticia fria')
         credibilidade_sinal = (self.checa_msg_em_dicionario(mensagem, dict_path='src/dicts/dicionario_sinal.txt'), 'faltou sinal')
-        credibilidades = [credibilidade_bom_dia, credibilidade_noticia_quente, credibilidade_odio, credibilidade_reportagem, credibilidade_noticia_fria, credibilidade_sinal]
+        credibilidade_local = (self.checa_msg_em_dicionario(mensagem, dict_path='src/dicts/dicionario_localizacao.txt'), 'localizacao')
+        credibilidades = [credibilidade_bom_dia, credibilidade_noticia_quente, credibilidade_odio, credibilidade_reportagem, credibilidade_noticia_fria, credibilidade_sinal, credibilidade_local]
         predict = (0,'')
         for cred in credibilidades:
             if cred[0] > predict[0]:
@@ -117,4 +114,6 @@ class NLP:
         self.alimentar_dicionario(sugestoes_reportagens, top_n=20, remover_stopwords=True, dicionario_path='src/dicts/dicionario_reportagens.txt')
         self.alimentar_dicionario(faltas_de_sinais, top_n=20, remover_stopwords=True, dicionario_path='src/dicts/dicionario_sinal.txt')
         self.alimentar_dicionario(mensagens_bom_dia, top_n=20, remover_stopwords=True, dicionario_path='src/dicts/dicionario_bom_dia.txt')
+        self.alimentar_dicionario(localizacoes, top_n=20, remover_stopwords=True, dicionario_path='src/dicts/dicionario_localizacao.txt')
+
 

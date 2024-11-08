@@ -34,6 +34,10 @@ Como principais features, nós temos:
   - **Identidade visual aprimorada e bem definida:** Interface amigável e de fácil navegação para que usuários possam interagir com a assistente Estela.
   - **Backend de ponta a ponta:** O sistema é integrado desde o recebimento e categorização das mensagens até a geração de relatórios ou documentos que são encaminhados ao colaborativo.
 
+# TUDO ISSO FOI FEITO EM 2 DIAS!!!
+
+Esse é o nosso projeto para o Globo Challange 3.0, um hackaton que aconteceu durante o Rec'N Play!
+
 # Imagens de atendimentos:
 
 ![Exemplo de atendimento no caso de um bom dia.](media/bom_dia.png)

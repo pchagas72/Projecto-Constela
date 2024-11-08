@@ -1,1 +1,1 @@
-O modelo de rede neural convolucional utilizado tem 200Mb, ele está no google drive, caso alguém queria acesso. Falar com Pedro Chagas.
+O modelo de rede neural convolucional utilizado tem 600Mb, ele está no google drive, caso alguém queria acesso. Falar com Pedro Chagas.

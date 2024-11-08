@@ -13,8 +13,8 @@ from time import sleep
 
 # Carregar variáveis de ambiente
 load_dotenv()
-TWILIO_ACCOUNT_SID = 'AC80ca4525936c35fa79c4a0d224ec2d8f'
-TWILIO_AUTH_TOKEN = 'e4c12bfaa0e6b4517994a9c51efb4e90'
+TWILIO_ACCOUNT_SID = 'CHAVE'
+TWILIO_AUTH_TOKEN = 'CHAVE'
 
 # Configurando o modelo e NLP
 NLP = NLP()
